@@ -16,5 +16,9 @@ if __name__ == "__main__":
             else:
                 words[word] = 1
 
-    for word, count in words.iteritems():
+    fileinput.close()
+
+    sortedWords = sorted(words.items(), key=lambda x: x[1], reverse=True)
+
+    for word, count in sortedWords:
         print("%d\t%s" % (count, word))
