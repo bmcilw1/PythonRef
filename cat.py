@@ -7,6 +7,8 @@ def main():
     for filename in sys.argv[1:]:
         f = open(filename, 'rU')
 
+        print("From file %s:\n" % filename)
+        
         for line in f:
             print(line, end="")
         f.close()
